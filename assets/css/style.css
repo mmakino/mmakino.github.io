@@ -133,17 +133,17 @@ aside img {
 @media screen and (min-width: 768px) {
   @-webkit-keyframes dir1 {
     0%   { left:0px; top:0vh; }
-    25%  { left:30vw; top:0vh; }
-    50%  { left:30vw; top:30vh; }
-    75%  { left:0px; top:30vh; }
+    25%  { left:35vw; top:0vh; }
+    50%  { left:35vw; top:38vh; }
+    75%  { left:0px; top:38vh; }
     100% { left:0px; top:0vh; }
   }
 
   @keyframes dir1 {
     0%   { left:0vw; top:0vh;}
-    25%  { left:30vw; top:0vh;}
-    50%  { left:30vw; top:30vh;}
-    75%  { left:0vw; top:30vh;}
+    25%  { left:35vw; top:0vh;}
+    50%  { left:35vw; top:38vh;}
+    75%  { left:0vw; top:38vh;}
     100% { left:0vw; top:0vh;}
   }
 
@@ -159,16 +159,16 @@ aside img {
   @-webkit-keyframes dir2 {
     0%   { left:0px; top:0px; }
     25%  { left:-30vw; top:0vh; }
-    50%  { left:-30vw; top:30vh; }
-    75%  { left:0vw; top:30vh; }
+    50%  { left:-30vw; top:38vh; }
+    75%  { left:0vw; top:38vh; }
     100% { left:0vw; top:0vw; }
   }
 
   @keyframes dir2 {
     0%   { left:0vw; top:0vh; }
     25%  { left:-30vw; top:0vh; }
-    50%  { left:-30vw; top:30vh; }
-    75%  { left:0vw; top:30vh; }
+    50%  { left:-30vw; top:38vh; }
+    75%  { left:0vw; top:38vh; }
     100% { left:0vw; top:0px; }
   }
 
@@ -183,16 +183,16 @@ aside img {
 
   @-webkit-keyframes dir3 {
     0%   { left:0vw; top:0vh; }
-    25%  { left:30vw; top:0vh; }
-    50%  { left:30vw; top:-30vh; }
+    25%  { left:35vw; top:0vh; }
+    50%  { left:35vw; top:-30vh; }
     75%  { left:0vw; top:-30vh; }
     100% { left:0vw; top:0vh; }
   }
 
   @keyframes dir3 {
     0%   { left:0vw; top:0vh;}
-    25%  { left:30vw; top:0vh;}
-    50%  { left:30vw; top:-30vh;}
+    25%  { left:35vw; top:0vh;}
+    50%  { left:35vw; top:-30vh;}
     75%  { left:0vw; top:-30vh;}
     100% { left:0vw; top:0vh;}
   }
@@ -233,16 +233,16 @@ aside img {
 
   @-webkit-keyframes dir5 {
     0%   { left:0vw; top:0vh; }
-    25%  { left:30vw; top:0vh; }
-    50%  { left:30vw; top:-30vh; }
+    25%  { left:35vw; top:0vh; }
+    50%  { left:35vw; top:-30vh; }
     75%  { left:0vw; top:-30vh; }
     100% { left:0vw; top:0vh; }
   }
 
   @keyframes dir5 {
     0%   { left:0vw; top:0vh; }
-    25%  { left:30vw; top:0vh; }
-    50%  { left:30vw; top:-30vh; }
+    25%  { left:35vw; top:0vh; }
+    50%  { left:35vw; top:-30vh; }
     75%  { left:0vw; top:-30vh; }
     100% { left:0vw; top:0vh; }
   }
