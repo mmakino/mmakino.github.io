@@ -76,6 +76,12 @@ section {
   margin: 5% 5%;
 }
 
+@media screen and (max-width: 640px) {
+section {
+  margin-top: 39%;
+  margin-bottom: 25%;
+}
+
 section h2 {
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: #4aaaa5;
