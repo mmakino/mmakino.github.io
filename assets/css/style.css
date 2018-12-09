@@ -21,75 +21,59 @@
 -------------------------------------------------------------------------------------------
 */
 
+/*
+  Common CSS shared by 1)index.html, 2)portfolio.html, and 3)contact.html
+*/
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   color: #777777;
   background-image: url(../images/ep_naturalwhite.png);
   background-color: #4aaaa5;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
-  /* this has become needed after making footer fixed position at bottom */
-  margin-bottom: 10%;
+  margin: 10% 0%;
 }
 
-/***** Header at top *******/
+/***** Header Navbar at top *******/
 
-header {
+header,
+.navbar {
+  width: 100%;
   background-color: #ffffff;
-  border-bottom: 2px solid #cccccc;
 }
 
-header h1 {
-  display: inline-block;
+.navbar-brand {
   color: #ffffff;
   background-color: #4aaaa5;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 2em;
   font-weight: bold;
-  text-align: center;
-  padding: 22px;
-  margin-left: 150px;
 }
 
-header::after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-/* Nav link items */
-nav {
-  /* display: inline; */
-  /* position: relative; */
-  top: 0px;
-  left: 150px;
-  float: right;
-  padding: 20px 0px 0px 0px;
-  margin-right: 150px;
-}
-nav ul li {
-  float: left;
-  padding: 15px 0px 15px 20px;
-}
 nav ul li a:link {
   color: #777777;
   text-decoration: none;
 }
+
 nav ul li a:visited {
   color: #777777;
 }
+
 nav ul li a:hover {
   color: #4aaaa5;
   background-color: #ddd;
 }
 
-/***** Middle Section *******/
+/***** Main Section in the middle *******/
 
 section {
-  display: block;
   background-color: #ffffff;
-  margin: 30px 150px;
-  padding: 0px 25px;
-  /* width: 75%; */
+  padding: 1em 1em;
+  margin: 5% 5%;
 }
 
 section h2 {
@@ -98,8 +82,8 @@ section h2 {
   font-size: 1.5em;
   font-weight: bold;
   border-bottom: 2px solid #dddddd;
-  margin: 15px 0px;
-  padding: 15px 0px;
+  margin: 2vh 0vw;
+  padding: 2vh 0px;
 }
 
 article {
@@ -113,13 +97,14 @@ aside img {
 }
 
 /***** Portfolio Page *******/
-/*
-now using bootstrap grid system
-*/
+.container-fluid {
+  left: 0px;
+}
+
 .portfolio-caption {
   position: relative;
   top: -45px;
-  width: 20vw;
+  width: 30vw;
   height: auto;
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: #ffffff;
@@ -129,135 +114,149 @@ now using bootstrap grid system
   margin: 0.5em 0em;
 }
 
- .portfolio-img {
-  width: 20vw;
-  height: 25vh;
+.portfolio-img {
+  width: 30vw;
+  height: 35vh;
 } 
 
-@-webkit-keyframes dir1 {
-  0%   { left:0px; top:0px; }
-  25%  { left:40vw; top:0px; }
-  50%  { left:40vw; top:50vh; }
-  75%  { left:0px; top:50vh; }
-  100% { left:0px; top:0px; }
+
+@media screen and (max-width: 640px) {
+  .portfolio-caption {
+    width: 75vw;
+  }
+  .portfolio-img {
+    width: 75vw;
+    height: auto;
+  } 
 }
 
-@keyframes dir1 {
-  0%   { left:0px; top:0px;}
-  25%  { left:40vw; top:0px;}
-  50%  { left:40vw; top:50vh;}
-  75%  { left:0px; top:50vh;}
-  100% { left:0px; top:0px;}
+@media screen and (min-width: 768px) {
+  @-webkit-keyframes dir1 {
+    0%   { left:0px; top:0vh; }
+    25%  { left:30vw; top:0vh; }
+    50%  { left:30vw; top:30vh; }
+    75%  { left:0px; top:30vh; }
+    100% { left:0px; top:0vh; }
+  }
+
+  @keyframes dir1 {
+    0%   { left:0vw; top:0vh;}
+    25%  { left:30vw; top:0vh;}
+    50%  { left:30vw; top:30vh;}
+    75%  { left:0vw; top:30vh;}
+    100% { left:0vw; top:0vh;}
+  }
+
+  #prj1 {
+    -webkit-animation-name: dir1;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-direction: normal;
+    animation-name: dir1;
+    animation-duration: 5s;
+    animation-direction: normal;    
+  }
+
+  @-webkit-keyframes dir2 {
+    0%   { left:0px; top:0px; }
+    25%  { left:-30vw; top:0vh; }
+    50%  { left:-30vw; top:30vh; }
+    75%  { left:0vw; top:30vh; }
+    100% { left:0vw; top:0vw; }
+  }
+
+  @keyframes dir2 {
+    0%   { left:0vw; top:0vh; }
+    25%  { left:-30vw; top:0vh; }
+    50%  { left:-30vw; top:30vh; }
+    75%  { left:0vw; top:30vh; }
+    100% { left:0vw; top:0px; }
+  }
+
+  #prj2 {
+    -webkit-animation-name: dir2;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-direction: normal;
+    animation-name: dir2;
+    animation-duration: 5s;
+    animation-direction: normal;
+  }
+
+  @-webkit-keyframes dir3 {
+    0%   { left:0vw; top:0vh; }
+    25%  { left:30vw; top:0vh; }
+    50%  { left:30vw; top:-30vh; }
+    75%  { left:0vw; top:-30vh; }
+    100% { left:0vw; top:0vh; }
+  }
+
+  @keyframes dir3 {
+    0%   { left:0vw; top:0vh;}
+    25%  { left:30vw; top:0vh;}
+    50%  { left:30vw; top:-30vh;}
+    75%  { left:0vw; top:-30vh;}
+    100% { left:0vw; top:0vh;}
+  }
+
+  #prj3 {
+    -webkit-animation-name: dir3;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-direction: normal;
+    animation-name: dir3;
+    animation-duration: 5s;
+    animation-direction: normal;
+  }
+
+  @-webkit-keyframes dir4 {
+    0%   { left:0vw; top:0vh; }
+    25%  { left:-30vw; top:0vh; }
+    50%  { left:-30vw; top:-30vh; }
+    75%  { left:0vw; top:-30vh; }
+    100% { left:0vw; top:0vh; }
+  }
+
+  @keyframes dir4 {
+    0%   { left:vw; top:0vh; }
+    25%  { left:-30vw; top:0vh; }
+    50%  { left:-30vw; top:-30vh; }
+    75%  { left:0vw; top:-30vh; }
+    100% { left:0vw; top:0vh; }
+  }
+
+  #prj4 {
+    -webkit-animation-name: dir4;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-direction: normal;
+    animation-name: dir4;
+    animation-duration: 5s;
+    animation-direction: normal;
+  }
+
+  @-webkit-keyframes dir5 {
+    0%   { left:0vw; top:0vh; }
+    25%  { left:30vw; top:0vh; }
+    50%  { left:30vw; top:-30vh; }
+    75%  { left:0vw; top:-30vh; }
+    100% { left:0vw; top:0vh; }
+  }
+
+  @keyframes dir5 {
+    0%   { left:0vw; top:0vh; }
+    25%  { left:30vw; top:0vh; }
+    50%  { left:30vw; top:-30vh; }
+    75%  { left:0vw; top:-30vh; }
+    100% { left:0vw; top:0vh; }
+  }
+
+  #prj5 {
+    -webkit-animation-name: dir5;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-direction: normal;
+    animation-name: dir5;
+    animation-duration: 5s;
+    animation-direction: normal;
+  }
 }
 
-#prj1 {
-  -webkit-animation-name: dir1; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 5s; /* Safari 4.0 - 8.0 */
-  -webkit-animation-direction: normal; /* Safari 4.0 - 8.0 */
-  animation-name: dir1;
-  animation-duration: 5s;
-  animation-direction: normal;    
-}
-
-@-webkit-keyframes dir2 {
-  0%   { left:0px; top:0px; }
-  25%  { left:-40vw; top:0px; }
-  50%  { left:-40vw; top:50vh; }
-  75%  { left:0px; top:50vh; }
-  100% { left:0px; top:0px; }
-}
-
-@keyframes dir2 {
-  0%   { left:0px; top:0px; }
-  25%  { left:-40vw; top:0px; }
-  50%  { left:-40vw; top:50vh; }
-  75%  { left:0px; top:50vh; }
-  100% { left:0px; top:0px; }
-}
-
-#prj2 {
-  -webkit-animation-name: dir2; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 5s; /* Safari 4.0 - 8.0 */
-  -webkit-animation-direction: normal; /* Safari 4.0 - 8.0 */
-  animation-name: dir2;
-  animation-duration: 5s;
-  animation-direction: normal;
-}
-
-@-webkit-keyframes dir3 {
-  0%   { left:0px; top:0px; }
-  25%  { left:40vw; top:0px; }
-  50%  { left:40vw; top:-40vh; }
-  75%  { left:0px; top:-40vh; }
-  100% { left:0px; top:0px; }
-}
-
-@keyframes dir3 {
-  0%   { left:0px; top:0px;}
-  25%  { left:40vw; top:0px;}
-  50%  { left:40vw; top:-40vh;}
-  75%  { left:0px; top:-40vh;}
-  100% { left:0px; top:0px;}
-}
-
-#prj3 {
-  -webkit-animation-name: dir3; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 5s; /* Safari 4.0 - 8.0 */
-  -webkit-animation-direction: normal; /* Safari 4.0 - 8.0 */
-  animation-name: dir3;
-  animation-duration: 5s;
-  animation-direction: normal;
-}
-
-@-webkit-keyframes dir4 {
-  0%   { left:0px; top:0px; }
-  25%  { left:-40vw; top:0px; }
-  50%  { left:-40vw; top:-40vh; }
-  75%  { left:0px; top:-40vh; }
-  100% { left:0px; top:0px; }
-}
-
-@keyframes dir4 {
-  0%   { left:0px; top:0px; }
-  25%  { left:-40vw; top:0px; }
-  50%  { left:-40vw; top:-40vh; }
-  75%  { left:0px; top:-40vh; }
-  100% { left:0px; top:0px; }
-}
-
-#prj4 {
-  -webkit-animation-name: dir4; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 5s; /* Safari 4.0 - 8.0 */
-  -webkit-animation-direction: normal; /* Safari 4.0 - 8.0 */
-  animation-name: dir4;
-  animation-duration: 5s;
-  animation-direction: normal;
-}
-
-@-webkit-keyframes dir5 {
-  0%   { left:0px; top:0px; }
-  25%  { left:40vw; top:0px; }
-  50%  { left:40vw; top:-40vh; }
-  75%  { left:0px; top:-40vh; }
-  100% { left:0px; top:0px; }
-}
-
-@keyframes dir5 {
-  0%   { left:0px; top:0px; }
-  25%  { left:40vw; top:0px; }
-  50%  { left:40vw; top:-40vh; }
-  75%  { left:0px; top:-40vh; }
-  100% { left:0px; top:0px; }
-}
-
-#prj5 {
-  -webkit-animation-name: dir5; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 5s; /* Safari 4.0 - 8.0 */
-  -webkit-animation-direction: normal; /* Safari 4.0 - 8.0 */
-  animation-name: dir5;
-  animation-duration: 5s;
-  animation-direction: normal;
-}
 
 /***** Contact Page *******/
 input[type=text] {
@@ -300,14 +299,19 @@ input[type=submit]:hover {
 /***** Footer at the bottom *******/
 footer {
   position: fixed;
+  left: 0px;
   bottom: 0px;
   width: 100%;
   background-color: #666666;
   color: #ffffff;
   font-size: 0.8em;
   text-align: center;
-  margin-top: 20px;
-  padding-bottom: 7px;
-  padding-top: 39px;
-  border-top: 5px solid #4aaaa5;
+  /* margin-top: 20px; */
+  margin-top: 10vh;
+  /* padding-bottom: 7px; */
+  padding-bottom: 1em;
+  /* padding-top: 39px; */
+  padding-top: 3em;
+  /* border-top: 5px solid #4aaaa5; */
+  border-top: 0.3em solid #4aaaa5;
 }
