@@ -237,31 +237,6 @@ aside img {
     animation-duration: 5s;
     animation-direction: normal;
   }
-
-  @-webkit-keyframes dir5 {
-    0%   { left:0vw; top:0vh; }
-    25%  { left:35vw; top:0vh; }
-    50%  { left:35vw; top:-30vh; }
-    75%  { left:0vw; top:-30vh; }
-    100% { left:0vw; top:0vh; }
-  }
-
-  @keyframes dir5 {
-    0%   { left:0vw; top:0vh; }
-    25%  { left:35vw; top:0vh; }
-    50%  { left:35vw; top:-30vh; }
-    75%  { left:0vw; top:-30vh; }
-    100% { left:0vw; top:0vh; }
-  }
-
-  #prj5 {
-    -webkit-animation-name: dir5;
-    -webkit-animation-duration: 5s;
-    -webkit-animation-direction: normal;
-    animation-name: dir5;
-    animation-duration: 5s;
-    animation-direction: normal;
-  }
 }
 
 
