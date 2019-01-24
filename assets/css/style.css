@@ -127,6 +127,17 @@ aside img {
   animation-duration: 6s;
   /* animation-delay: 1s; */
 }
+
+.social-media-links a:link {
+  color: #777777;
+}
+.social-media-links a:visited {
+  color: #777777;
+}
+.social-media-links a:hover {
+  color: #4aaaa5;
+  background-color: #ddd;
+}
   
 /***** Portfolio Page *******/
 .container-fluid {
