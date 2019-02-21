@@ -4,9 +4,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
   <title>Portfolio: Motohiko Makino</title>
 </head>
 
@@ -22,9 +29,6 @@
         <li class="navbar-item p-2">
           <a class="nav-link" href="portfolio.html">Portfolio</a>
         </li>
-        <li class="navbar-item p-2">
-          <a class="nav-link" href="contact.html">Contact</a>
-        </li>
       </ul>
     </nav>
   </header>
@@ -37,69 +41,471 @@
 
     <!-- Bootstrap Grid -->
     <div class="container-fluid">
-       <div class="row">
+      <div class="row">
+
         <div class="col col-md-auto prj-container" id="prj1">
-          <a href="https://github.com/mmakino/FriendFinder" target="_blank" alt="broken link, something went wrong">
+          <a data-toggle="modal" href="#sequelizedBurger" class="button">
+            <img src="assets/images/sequelizedBurger.png" alt="Sequelized Burger" class="img-fluid portfolio-img">
+            <div class="portfolio-caption">Sequelized Burger</div>
+          </a>
+        </div>
+        <div class="modal fade" id="sequelizedBurger" aria-labelledby="sequelizedBurgerModalCenterTitle" tabindex="-1"
+          role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="sequelizedBurgerModalCenterTitle" style="color: #4aaaa5">
+                  Sequelized Burger
+                </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h5>
+                  The burger app revised to use Sequelize ORM
+                </h5>
+                <h5 style="color: #333; font-family: 'Courier New', Courier, monospace; font-size: 0.9em; font-weight: bolder">
+                  Node.js, Express, Handlebars, Sequelize, MySQL
+                </h5>
+              </div>
+              <div class="modal-footer">
+                <a class="btn btn-primary" href="https://github.com/mmakino/sequelizedBurger" target="_blank" role="button">GitHub
+                  Repo</a>
+                <a class="btn btn-success" href="https://damp-forest-95991.herokuapp.com" target="_blank" role="button">Deployed
+                  App</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col col-md-auto prj-container" id="prj2">
+          <a data-toggle="modal" href="#Project-2" class="button">
+            <img src="assets/images/Project-2.png" alt="Project-2" class="img-fluid portfolio-img">
+            <div class="portfolio-caption">Project 2: Recipe Wolves</div>
+          </a>
+        </div>
+        <div class="modal fade" id="Project-2" aria-labelledby="Porject-2ModalCenterTitle" tabindex="-1" role="dialog"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="Project2ModalCenterTitle" style="color: #4aaaa5">
+                  Project 2: Recipe Wolves
+                </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h5>
+                  Search and share your favorite recipes!
+                </h5>
+                <h5 style="color: #333; font-family: 'Courier New', Courier, monospace; font-size: 0.9em; font-weight: bolder">
+                  Node.js, Express, Handlebars, Sequelize, MySQL, RESTFul API, Authentification Strategy(passport-js),
+                  connect-flash
+                </h5>
+              </div>
+              <div class="modal-footer">
+                <a class="btn btn-primary" href="https://github.com/mmakino/Project-2" target="_blank" role="button">GitHub
+                  Repo</a>
+                <a class="btn btn-success" href="https://peaceful-eyrie-53353.herokuapp.com/" target="_blank" role="button">Deployed
+                  App</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="col col-md-auto prj-container" id="prj3">
+          <a data-toggle="modal" href="#burger" class="button">
+            <img src="assets/images/burger.png" alt="burger app" class="img-fluid portfolio-img">
+            <div class="portfolio-caption">Burger App</div>
+          </a>
+        </div>
+        <div class="modal fade" id="burger" aria-labelledby="burgerModalCenterTitle" tabindex="-1" role="dialog"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="burgerModalCenterTitle" style="color: #4aaaa5">
+                  Eat-Da-Burger! -- Node Express Handlebars
+                </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h5>
+                  A restaurant app that lets users input the names of burgers to devour
+                </h5>
+                <h5 style="color: #333; font-family: 'Courier New', Courier, monospace; font-size: 0.9em; font-weight: bolder">
+                  Node.js, Express, Handlebars, MySQL, ORM, jQuery, AJAX
+                </h5>
+              </div>
+              <div class="modal-footer">
+                <a class="btn btn-primary" href="https://github.com/mmakino/burger" target="_blank" role="button">GitHub
+                  Repo</a>
+                <a class="btn btn-success" href="https://aqueous-beach-82382.herokuapp.com" target="_blank" role="button">Deployed
+                  App</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col col-md-auto prj-container" id="prj4">
+          <a data-toggle="modal" href="#BottomsUp" class="button">
+            <img src="assets/images/BottomsUp.png" alt="BottomsUp" class="img-fluid portfolio-img">;
+            <div class="portfolio-caption">Bottoms Up</div>
+          </a>
+        </div>
+        <div class="modal fade" id="BottomsUp" aria-labelledby="BottomsUpModalCenterTitle" tabindex="-1" role="dialog"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="BottomsUpModalCenterTitle" style="color: #4aaaa5">
+                  Project-1: BottomsUp!
+                </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h5>
+                  Drink web site that lets users search for drinks and share their favorite drink recipes
+                </h5>
+                <h5 style="color: #333; font-family: 'Courier New', Courier, monospace; font-size: 0.9em; font-weight: bolder">
+                  Javascript, jQuery, AJAX API client, Firebase
+                </h5>
+              </div>
+              <div class="modal-footer">
+                <a class="btn btn-primary" href="https://github.com/mmakino/BottomsUp" target="_blank" role="button">GitHub
+                  Repo</a>
+                <a class="btn btn-success" href="https://mmakino.github.io/BottomsUp" target="_blank" role="button">Deployed
+                  App</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="col col-md-auto prj-container" id="prj1">
+          <a data-toggle="modal" href="#FriendFinder" class="button">
             <img src="assets/images/friend_finder.png" alt="FriendFinder" class="img-fluid portfolio-img">
             <div class="portfolio-caption">Friend Finder</div>
           </a>
         </div>
+        <div class="modal fade" id="FriendFinder" aria-labelledby="FriendFinderModalCenterTitle" tabindex="-1" role="dialog"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="FriendFinderModalCenterTitle" style="color: #4aaaa5">
+                  Friend Finder - Node and Express Servers
+                </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h5>
+                  A dating app based on personality compatibility through survey
+                </h5>
+                <h5 style="color: #333; font-family: 'Courier New', Courier, monospace; font-size: 0.9em; font-weight: bolder">
+                  Node.js, Express, RESTful API, jQuery, AJAX
+                </h5>
+              </div>
+              <div class="modal-footer">
+                <a class="btn btn-primary" href="https://github.com/mmakino/FriendFinder" target="_blank" role="button">GitHub
+                  Repo</a>
+                <a class="btn btn-success" href="https://intense-falls-18158.herokuapp.com/" target="_blank" role="button">Deployed
+                  App</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="col col-md-auto prj-container" id="prj2">
-          <a href="https://github.com/mmakino/bamazon" target="_blank" alt="broken link, something went wrong">
-            <img src="assets/images/bamazon.png" alt="Bamazon" class="img-fluid portfolio-img">
-            <div class="portfolio-caption">Bamazon Storefront</div>
-          </a>
-        </div>
-      </div>     <div class="row">
-        <div class="col col-md-auto prj-container" id="prj3">
-          <a href="https://github.com/mmakino/RPS-Multiplayer" target="_blank" alt="broken link, something went wrong">
-            <img src="assets/images/rps-multiplayer.png" alt="RPS-Multiplayer" class="img-fluid portfolio-img">
-            <div class="portfolio-caption">RPS-Multiplayer</div>
-          </a>
-        </div>
-        <div class="col col-md-auto prj-container" id="prj4">
-          <a href="https://github.com/mmakino/TriviaGame" target="_blank" alt="broken link, something went wrong">
-            <img src="assets/images/trivia-game.png" alt="Trivia Game" class="img-fluid portfolio-img">
-            <div class="portfolio-caption">Trivia Game</div>
-          </a>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col col-md-auto prj-container" id="prj1">
-          <a href="https://github.com/mmakino/GifTastic" target="_blank" alt="broken link, something went wrong">
-            <img src="assets/images/giftastic.png" alt="Giftastic" class="img-fluid portfolio-img">
-            <div class="portfolio-caption">Giftastic</div>
-          </a>
-        </div>
-        <div class="col col-md-auto prj-container" id="prj2">
-          <a href="https://github.com/mmakino/unit-4-game" target="_blank" alt="broken link, something went wrong">
-            <img src="assets/images/star-wars-rpg.png" alt="Star Wars RPG Game" class="img-fluid portfolio-img">
-            <div class="portfolio-caption">Star Wars RPG Game</div>
-          </a>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col col-md-auto prj-container" id="prj3">
-          <a href="https://github.com/mmakino/Word-Guess-Game" target="_blank" alt="broken link, something went wrong">
+          <a data-toggle="modal" href="#Word-Guess-Game" class="button">
             <img src="assets/images/word-guess-game.png" alt="Word Guess Game" class="img-fluid portfolio-img">;
             <div class="portfolio-caption">Word Guess Game</div>
           </a>
         </div>
-        <div class="col col-md-auto prj-container" id="prj4">
-          <a href="https://github.com/mmakino/liri-node-app" target="_blank" alt="broken link, something went wrong">
-            <img src="assets/images/liri-node-cli.png" alt="Node CLI App" class="img-fluid portfolio-img">;
-            <div class="portfolio-caption">Node CLI App</div>
+        <div class="modal fade" id="Word-Guess-Game" aria-labelledby="Word-Guess-GameModalCenterTitle" tabindex="-1"
+          role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="Word-Guess-GameModalCenterTitle" style="color: #4aaaa5">
+                  Word Guess Game
+                </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h5>
+                  80's music themed Hangman game
+                </h5>
+                <h5 style="color: #333; font-family: 'Courier New', Courier, monospace; font-size: 0.9em; font-weight: bolder">
+                  Javascript, jQuery
+                </h5>
+              </div>
+              <div class="modal-footer">
+                <a class="btn btn-primary" href="https://github.com/mmakino/Word-Guess-Game" target="_blank" role="button">GitHub
+                  Repo</a>
+                <a class="btn btn-success" href="https://mmakino.github.io/Word-Guess-Game" target="_blank" role="button">Deployed
+                  App</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="col col-md-auto prj-container" id="prj3">
+          <a data-toggle="modal" href="#RPS-Multiplayer" class="button">
+            <img src="assets/images/rps-multiplayer.png" alt="RPS-Multiplayer" class="img-fluid portfolio-img">
+            <div class="portfolio-caption">RPS-Multiplayer</div>
           </a>
         </div>
+        <div class="modal fade" id="RPS-Multiplayer" aria-labelledby="RPS-MultiplayerModalCenterTitle" tabindex="-1"
+          role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="RPS-MultiplayerModalCenterTitle" style="color: #4aaaa5">
+                  RPS Multi-player
+                </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h5>
+                  Rock-Paper-Scissors multi-player online game based on Firebase for event synchronization
+                </h5>
+                <h5 style="color: #333; font-family: 'Courier New', Courier, monospace; font-size: 0.9em; font-weight: bolder">
+                  Javascript, jQuery, Firebase
+                </h5>
+              </div>
+              <div class="modal-footer">
+                <a class="btn btn-primary" href="https://github.com/mmakino/Word-Guess-Game" target="_blank" role="button">GitHub
+                  Repo</a>
+                <a class="btn btn-success" href="https://mmakino.github.io/Word-Guess-Game" target="_blank" role="button">Deployed
+                  App</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col col-md-auto prj-container" id="prj4">
+          <a data-toggle="modal" href="#TriviaGame" class="button">
+            <img src="assets/images/trivia-game.png" alt="Trivia Game" class="img-fluid portfolio-img">
+            <div class="portfolio-caption">Trivia Game</div>
+          </a>
+        </div>
+        <div class="modal fade" id="TriviaGame" aria-labelledby="TriviaGameModalCenterTitle" tabindex="-1" role="dialog"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="TriviaGameModalCenterTitle" style="color: #4aaaa5">
+                  Trivia Game
+                </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h5>
+                  A Trivia game written in JavaScript and jQuery, making use of the timers
+                </h5>
+                <h5 style="color: #333; font-family: 'Courier New', Courier, monospace; font-size: 0.9em; font-weight: bolder">
+                  Javascript, jQuery
+                </h5>
+              </div>
+              <div class="modal-footer">
+                <a class="btn btn-primary" href="https://github.com/mmakino/TriviaGame" target="_blank" role="button">GitHub
+                  Repo</a>
+                <a class="btn btn-success" href="https://mmakino.github.io/TriviaGame" target="_blank" role="button">Deployed
+                  App</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
+
+      <div class="row">
+
+        <div class="col col-md-auto prj-container" id="prj1">
+          <a data-toggle="modal" href="#GifTastic" class="button">
+            <img src="assets/images/giftastic.png" alt="Giftastic" class="img-fluid portfolio-img">
+            <div class="portfolio-caption">Giftastic</div>
+          </a>
+        </div>
+        <div class="modal fade" id="GifTastic" aria-labelledby="GifTasticModalCenterTitle" tabindex="-1" role="dialog"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="GifTasticModalCenterTitle" style="color: #4aaaa5">
+                  GifTastic!
+                </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h5>
+                  Use the GIPHY API to make a dynamic web page that populates with gif images
+                </h5>
+                <h5 style="color: #333; font-family: 'Courier New', Courier, monospace; font-size: 0.9em; font-weight: bolder">
+                  Javascript, jQuery, AJAX
+                </h5>
+              </div>
+              <div class="modal-footer">
+                <a class="btn btn-primary" href="https://github.com/mmakino/GifTastic" target="_blank" role="button">GitHub
+                  Repo</a>
+                <a class="btn btn-success" href="https://mmakino.github.io/GifTastic" target="_blank" role="button">Deployed
+                  App</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col col-md-auto prj-container" id="prj2">
+          <a data-toggle="modal" href="#unit-4-game" class="button">
+            <img src="assets/images/star-wars-rpg.png" alt="Star Wars RPG Game" class="img-fluid portfolio-img">
+            <div class="portfolio-caption">Star Wars RPG Game</div>
+          </a>
+        </div>
+        <div class="modal fade" id="unit-4-game" aria-labelledby="unit-4-gameModalCenterTitle" tabindex="-1" role="dialog"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="unit-4-gameModalCenterTitle" style="color: #4aaaa5">
+                  Star Wars RPG Game
+                </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h5>
+                  Star Wars themed RPG game written in javascript and jQuery.
+                </h5>
+                <h5 style="color: #333; font-family: 'Courier New', Courier, monospace; font-size: 0.9em; font-weight: bolder">
+                  Javascript, jQuery
+                </h5>
+              </div>
+              <div class="modal-footer">
+                <a class="btn btn-primary" href="https://github.com/mmakino/unit-4-game" target="_blank" role="button">GitHub
+                  Repo</a>
+                <a class="btn btn-success" href="https://mmakino.github.io/unit-4-game" target="_blank" role="button">Deployed
+                  App</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="col col-md-auto prj-container" id="prj3">
+          <a data-toggle="modal" href="#bamazon" class="button">
+            <img src="assets/images/bamazon.png" alt="Bamazon" class="img-fluid portfolio-img">
+            <div class="portfolio-caption">Bamazon Storefront</div>
+          </a>
+        </div>
+        <div class="modal fade" id="bamazon" aria-labelledby="bamazonModalCenterTitle" tabindex="-1" role="dialog"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="bamazonModalCenterTitle" style="color: #4aaaa5">
+                  Bamazon -- Amazon-like storefront
+                </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h5>
+                  Node.js app with a command-line interface using MySQL in the backend.
+                </h5>
+                <h5 style="color: #333; font-family: 'Courier New', Courier, monospace; font-size: 0.9em; font-weight: bolder">
+                  Node.js, MySQL
+                </h5>
+              </div>
+              <div class="modal-footer">
+                <a class="btn btn-primary" href="https://github.com/mmakino/bamazon" target="_blank" role="button">GitHub
+                  Repo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col col-md-auto prj-container" id="prj4">
+          <a data-toggle="modal" href="#liri-node-app" class="button">
+            <img src="assets/images/liri-node-cli.png" alt="Node CLI App" class="img-fluid portfolio-img">;
+            <div class="portfolio-caption">LIRI CLI App</div>
+          </a>
+        </div>
+        <div class="modal fade" id="liri-node-app" aria-labelledby="liri-node-appModalCenterTitle" tabindex="-1" role="dialog"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="liri-node-appModalCenterTitle" style="color: #4aaaa5">
+                  LIRI -- Node.js command-line app
+                </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h5>
+                  LIRI is like iPhone's SIRI.
+                </h5>
+                <h5 style="color: #333; font-family: 'Courier New', Courier, monospace; font-size: 0.9em; font-weight: bolder">
+                  Node.js, AJAX API query
+                </h5>
+              </div>
+              <div class="modal-footer">
+                <a class="btn btn-primary" href="https://github.com/mmakino/liri-node-app" target="_blank" role="button">GitHub
+                  Repo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
     </div>
 
   </section>
 
   <!-- Footer at the bottom -->
+  <p class="social-media-links ml-3">
+    <a href="https://www.linkedin.com/in/makino" target="_blank">
+      <i class="fa fa-linkedin-square fa-1g" aria-hidden="true"></i>
+      LinkedIn
+    </a>
+    <a href="https://github.com/mmakino" target="_blank">
+      <i class="fa fa-github fa-1g" aria-hidden="true"></i>
+      GitHub
+    </a>
+    <a href="mailto:motohiko.makino@gmail.com?Subject=Reaching out via GitHub" target="_top">
+      <i class="fa fa-envelope-o" aria-hidden="true"></i>
+      Email
+    </a>
+  </p>
   <footer>
-    Copyright &copy; 2018 Motohiko Makino
+    Copyright &copy; 2019 Motohiko Makino
   </footer>
+
 </body>
 
 </html>
